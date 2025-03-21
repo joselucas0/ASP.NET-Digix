@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\joselucas\\ASP.NET-Digix\\ASPNET_1\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ASPNET_1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ASPNET_1.props",
+      "PackagePath": "build\\ASPNET_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ASPNET_1.props",
+      "PackagePath": "buildMultiTargeting\\ASPNET_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ASPNET_1.props",
+      "PackagePath": "buildTransitive\\ASPNET_1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

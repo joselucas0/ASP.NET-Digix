@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "kLQEGFpeWuhOYgxbYPQlvARZ621fdx5Lf+reFGwWw+0=",
+  "Source": "ASPNET_1",
+  "BasePath": "_content/ASPNET_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPNET_1\\wwwroot",
+      "Source": "ASPNET_1",
+      "ContentRoot": "C:\\Users\\joselucas\\ASP.NET-Digix\\ASPNET_1\\wwwroot\\",
+      "BasePath": "_content/ASPNET_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\joselucas\\ASP.NET-Digix\\ASPNET_1\\wwwroot\\login.html",
+      "SourceId": "ASPNET_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joselucas\\ASP.NET-Digix\\ASPNET_1\\wwwroot\\",
+      "BasePath": "_content/ASPNET_1",
+      "RelativePath": "login.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
+    }
+  ]
+}
