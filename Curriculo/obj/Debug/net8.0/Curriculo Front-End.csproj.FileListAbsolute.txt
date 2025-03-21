@@ -1,0 +1,34 @@
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.AssemblyInfoInputs.cache
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.AssemblyInfo.cs
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.csproj.CoreCompileInputs.cache
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.sourcelink.json
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.csproj.AssemblyReference.cache
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Curriculo Front-End.exe
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Curriculo Front-End.deps.json
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Curriculo Front-End.runtimeconfig.json
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Curriculo Front-End.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Curriculo Front-End.pdb
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curricul.1DF099D5.Up2Date
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\refint\Curriculo Front-End.dll
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.pdb
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\Curriculo Front-End.genruntimeconfig.cache
+C:\Users\joselucas\ASP.NET-Digix\Curriculo\obj\Debug\net8.0\ref\Curriculo Front-End.dll
