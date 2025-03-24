@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YKygDm2sIZ8=",
+  "dgSpecHash": "wHbSKMp30LM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\joselucas\\ASP.NET-Digix\\Curriculo\\Curriculo Front-End.csproj",
+  "projectFilePath": "C:\\Users\\joselucas\\ASP.NET-Digix\\curriculo\\Curriculo Front-End.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joselucas\\.nuget\\packages\\microsoft.aspnetcore\\2.3.0\\microsoft.aspnetcore.2.3.0.nupkg.sha512",
     "C:\\Users\\joselucas\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

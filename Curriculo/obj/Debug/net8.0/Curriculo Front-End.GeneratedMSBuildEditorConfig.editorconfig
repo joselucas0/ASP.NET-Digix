@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Curriculo_Front_End
-build_property.ProjectDir = C:\Users\joselucas\ASP.NET-Digix\Curriculo\
+build_property.ProjectDir = C:\Users\joselucas\ASP.NET-Digix\curriculo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
