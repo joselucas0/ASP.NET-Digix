@@ -1,0 +1,124 @@
+:root {
+    --primary: #3498db;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-save {
+    background: var(--success);
+    color: white;
+}
+
+.btn-edit {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-delete {
+    background: var(--danger);
+    color: white;
+}
+
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-card {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-content {
+    flex-grow: 1;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.array-debug {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 0.5rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success { background: var(--success); }
+.error { background: var(--danger); }
+.info { background: var(--primary); }

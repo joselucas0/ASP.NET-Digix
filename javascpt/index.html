@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Matemáticas</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Operações Matemáticas em JavaScript</h1>
+        
+        <div class="operation">
+            <h3>Valores Iniciais:</h3>
+            <p><code>num1 = 10</code>, <code>num2 = 20</code></p>
+        </div>
+        
+        <div class="operation">
+            <h3>Soma:</h3>
+            <p><code>let totalSoma = num1 + num2;</code></p>
+            <p>Resultado: <span class="result" id="soma"></span></p>
+        </div>
+        
+        <div class="operation">
+            <h3>Subtração:</h3>
+            <p><code>let totalSubtracao = num1 - num2;</code></p>
+            <p>Resultado: <span class="result" id="subtracao"></span></p>
+        </div>
+        
+        <div class="operation">
+            <h3>Multiplicação:</h3>
+            <p><code>let totalMultiplicacao = num1 * num2;</code></p>
+            <p>Resultado: <span class="result" id="multiplicacao"></span></p>
+        </div>
+        
+        <div class="operation">
+            <h3>Divisão:</h3>
+            <p><code>let totalDivisao = num1 / num2;</code></p>
+            <p>Resultado: <span class="result" id="divisao"></span></p>
+        </div>
+        
+        <div class="operation">
+            <h3>Resto da Divisão:</h3>
+            <p><code>let totalResto = num1 % num2;</code></p>
+            <p>Resultado: <span class="result" id="resto"></span></p>
+        </div>
+        
+        <button id="showAlert">Mostrar Alert</button>
+        <button id="writeDocument">Mostrar no Documento</button>
+    </div>
+
+    <script>
+        // Declaração das variáveis
+        let num1 = 10;
+        let num2 = 20;
+
+        // Operações matemáticas
+        let totalSoma = num1 + num2;
+        let totalSubtracao = num1 - num2;
+        let totalMultiplicacao = num1 * num2;
+        let totalDivisao = num1 / num2;
+        let totalResto = num1 % num2;
+
+        // Exibindo os resultados na página
+        document.getElementById('soma').textContent = totalSoma;
+        document.getElementById('subtracao').textContent = totalSubtracao;
+        document.getElementById('multiplicacao').textContent = totalMultiplicacao;
+        document.getElementById('divisao').textContent = totalDivisao;
+        document.getElementById('resto').textContent = totalResto;
+
+        // Função para mostrar alert
+        document.getElementById('showAlert').addEventListener('click', function() {
+            alert(`O valor de num1 é: ${num1} + ${num2} = ${num1 + num2}`);
+        });
+
+    </script>
+</body>
+</html>
