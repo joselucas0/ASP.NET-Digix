@@ -1,0 +1,23 @@
+{
+  "name": "heranca-animais",
+  "version": "1.0.0",
+  "description": "Exemplo de POO com herança de animais em JavaScript",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "poo",
+    "herança",
+    "nodejs"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
