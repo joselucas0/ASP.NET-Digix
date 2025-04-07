@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNET_1", "ASPNET_1\ASPNET_1.csproj", "{84FEA665-1248-4480-8CB7-2F60EE672D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{31759667-DDCF-4BFC-B693-4611630CE662}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{84FEA665-1248-4480-8CB7-2F60EE672D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84FEA665-1248-4480-8CB7-2F60EE672D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84FEA665-1248-4480-8CB7-2F60EE672D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31759667-DDCF-4BFC-B693-4611630CE662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31759667-DDCF-4BFC-B693-4611630CE662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31759667-DDCF-4BFC-B693-4611630CE662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31759667-DDCF-4BFC-B693-4611630CE662}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
