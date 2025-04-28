@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNET_1", "ASPNET_1\ASPNET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{31759667-DDCF-4BFC-B693-4611630CE662}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEscolarAPI", "SistemaEscolarAPI\SistemaEscolarAPI.csproj", "{0E14298A-D97E-4B6A-9283-5F8DEE573726}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{31759667-DDCF-4BFC-B693-4611630CE662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31759667-DDCF-4BFC-B693-4611630CE662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31759667-DDCF-4BFC-B693-4611630CE662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E14298A-D97E-4B6A-9283-5F8DEE573726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E14298A-D97E-4B6A-9283-5F8DEE573726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E14298A-D97E-4B6A-9283-5F8DEE573726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E14298A-D97E-4B6A-9283-5F8DEE573726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

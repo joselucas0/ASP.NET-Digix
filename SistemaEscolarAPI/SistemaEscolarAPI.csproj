@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.9.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.9.0" />
+  </ItemGroup>
+
+</Project>
+
+
+<!-- 
+
+# Cria um novo projeto Web API usando o template padrão do .NET
+dotnet new webapi -n SistemaEscolarAPI
+
+# Adiciona suporte à documentação Swagger/OpenAPI
+dotnet add package Microsoft.AspNetCore.OpenApi
+
+# Pacote para integração com PostgreSQL via Entity Framework Core
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+
+# Pacote base do Entity Framework Core
+dotnet add package Microsoft.EntityFrameworkCore
+
+# Ferramentas para design-time do EF Core (necessário para migrations)
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+# Pacote para geração de documentação Swagger UI
+dotnet add package Swashbuckle.AspNetCore
+
+# Pacotes para autenticação JWT (Token Bearer)
+dotnet add package Microsoft.IdentityModel.Tokens
+dotnet add package System.IdentityModel.Tokens.Jwt
+
+# Validação de modelos com Fluent Validation
+dotnet add package FluentValidation.AspNetCore
+
+# Comandos para gerenciar migrations do Entity Framework Core:
+# 1. Cria uma nova migration chamada "InitialCreate"
+dotnet ef migrations add InitialCreate
+
+# 2. Aplica as migrations pendentes no banco de dados
+dotnet ef database update
+
+-->
