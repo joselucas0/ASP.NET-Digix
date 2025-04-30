@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace SistemaEscolarAPI.Models
 {
     public class Aluno
     {
-            public int Id { get; set; }
-        public string Nome { get; set; }
+        public int Id { get; set; }
+        public string? Nome { get; set; }
         
         // Chave estrangeira para Curso
         public int CursoId { get; set; }
