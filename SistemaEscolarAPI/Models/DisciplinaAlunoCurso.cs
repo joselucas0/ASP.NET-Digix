@@ -1,20 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace SistemaEscolarAPI.Models
 {
     public class DisciplinaAlunoCurso
     {
-            // Chaves estrangeiras composta
-    public int AlunoId { get; set; }
-    public int CursoId { get; set; }
-    public int DisciplinaId { get; set; }
-    
-    // Navegações
-    public Aluno Aluno { get; set; }
-    public Curso Curso { get; set; }
-    public Disciplina Disciplina { get; set; }
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public int DisciplinaId { get; set; }
+        public Disciplina Disciplina { get; set; }
+
+        [Required]
+        public int AlunoId { get; set; }
+        public Aluno Aluno { get; set; }
+
+        [Required]
+        public int CursoId { get; set; }
+        public Curso Curso { get; set; }
+
+        [Range(0, 10)]
+        public decimal Nota { get; set; }
     }
 }
