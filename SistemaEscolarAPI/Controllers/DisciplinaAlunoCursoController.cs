@@ -1,90 +1,124 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SistemaEscolarAPI.DB;
 using SistemaEscolarAPI.Models;
 using SistemaEscolarAPI.DTO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Runtime.InteropServices;
 
 namespace SistemaEscolarAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class DisciplinaAlunoCursoController : ControllerBase
     {
-        // Lista em memória para simular o banco de dados (substitua isso por sua lógica real)
-        private static List<DisciplinaAlunoCurso> _dados = new List<DisciplinaAlunoCurso>();
-        private static int _nextId = 1;
+        private readonly AppDbContext _context;
 
-        // GET: api/DisciplinaAlunoCurso
+        public DisciplinaAlunoCursoController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
-        public ActionResult<IEnumerable<DisciplinaAlunoCurso>> GetDisciplinasAlunosCursos()
+        public async Task<ActionResult<IEnumerable<DisciplinaAlunoCursoDTO>>> GetAll()
         {
-            return _dados;
+            var registros = await _context.DisciplinaAlunoCursos
+                .Include(dac => dac.Aluno)
+                .Include(dac => dac.Curso)
+                .Include(dac => dac.Disciplina)
+                .Select(dac => new DisciplinaAlunoCursoDTO
+                {
+                    Id = dac.Id,
+                    AlunoId = dac.AlunoId,
+                    AlunoNome = dac.Aluno.Nome,
+                    CursoId = dac.CursoId,
+                    CursoDescricao = dac.Curso.Descricao,
+                    DisciplinaId = dac.DisciplinaId,
+                    DisciplinaDescricao = dac.Disciplina.Descricao,
+                    Nota = dac.Nota
+                })
+                .ToListAsync();
+
+            return Ok(registros);
         }
 
-        // GET: api/DisciplinaAlunoCurso/5
         [HttpGet("{id}")]
-        public ActionResult<DisciplinaAlunoCurso> GetDisciplinaAlunoCurso(int id)
+        public async Task<ActionResult<DisciplinaAlunoCursoDTO>> GetById(int id)
         {
-            var entidade = _dados.FirstOrDefault(e => e.Id == id);
-            if (entidade == null)
+            var dac = await _context.DisciplinaAlunoCursos
+                .Include(d => d.Aluno)
+                .Include(d => d.Curso)
+                .Include(d => d.Disciplina)
+                .FirstOrDefaultAsync(d => d.Id == id);
+
+            if (dac == null)
+                return NotFound("Relação não encontrada.");
+
+            var dto = new DisciplinaAlunoCursoDTO
             {
-                return NotFound();
-            }
-            return entidade;
+                Id = dac.Id,
+                AlunoId = dac.AlunoId,
+                AlunoNome = dac.Aluno.Nome,
+                CursoId = dac.CursoId,
+                CursoDescricao = dac.Curso.Descricao,
+                DisciplinaId = dac.DisciplinaId,
+                DisciplinaDescricao = dac.Disciplina.Descricao,
+                Nota = dac.Nota
+            };
+
+            return Ok(dto);
         }
 
-        // POST: api/DisciplinaAlunoCurso
         [HttpPost]
-        public ActionResult<DisciplinaAlunoCurso> PostDisciplinaAlunoCurso(DisciplinaAlunoCurso entidade)
+        public async Task<ActionResult<DisciplinaAlunoCursoDTO>> Create([FromBody] DisciplinaAlunoCursoDTO dto)
         {
-            entidade.Id = _nextId++;
-            _dados.Add(entidade);
-            return CreatedAtAction(nameof(GetDisciplinaAlunoCurso), new { id = entidade.Id }, entidade);
+            var ent = new DisciplinaAlunoCurso
+            {
+                AlunoId = dto.AlunoId,
+                CursoId = dto.CursoId,
+                DisciplinaId = dto.DisciplinaId,
+                Nota = dto.Nota
+            };
+            _context.DisciplinaAlunoCursos.Add(ent);
+            await _context.SaveChangesAsync();
+
+            dto.Id = ent.Id;
+            return CreatedAtAction(nameof(GetById), new { id = ent.Id }, dto);
         }
 
-        // PUT: api/DisciplinaAlunoCurso/5
         [HttpPut("{id}")]
-        public IActionResult PutDisciplinaAlunoCurso(int id, DisciplinaAlunoCurso entidade)
+        public async Task<IActionResult> Update(int id, [FromBody] DisciplinaAlunoCursoDTO dto)
         {
-            var existing = _dados.FirstOrDefault(e => e.Id == id);
-            if (existing == null)
-            {
-                return NotFound();
-            }
+            if (id != dto.Id)
+                return BadRequest("ID não corresponde.");
 
-            existing.DisciplinaId = entidade.DisciplinaId;
-            existing.AlunoId = entidade.AlunoId;
-            existing.CursoId = entidade.CursoId;
-            existing.Nota = entidade.Nota;
+            var ent = await _context.DisciplinaAlunoCursos.FindAsync(id);
+            if (ent == null)
+                return NotFound();
+
+            ent.AlunoId = dto.AlunoId;
+            ent.CursoId = dto.CursoId;
+            ent.DisciplinaId = dto.DisciplinaId;
+            ent.Nota = dto.Nota;
+
+            _context.Entry(ent).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        // DELETE: api/DisciplinaAlunoCurso/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteDisciplinaAlunoCurso(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var entidade = _dados.FirstOrDefault(e => e.Id == id);
-            if (entidade == null)
-            {
+            var ent = await _context.DisciplinaAlunoCursos.FindAsync(id);
+            if (ent == null)
                 return NotFound();
-            }
 
-            _dados.Remove(entidade);
+            _context.DisciplinaAlunoCursos.Remove(ent);
+            await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }
-
-    // Defina a classe DisciplinaAlunoCurso dentro do mesmo arquivo (se necessário)
-    public class DisciplinaAlunoCurso
-    {
-        public int Id { get; set; }
-        public int DisciplinaId { get; set; }
-        public int AlunoId { get; set; }
-        public int CursoId { get; set; }
-        public decimal Nota { get; set; }
-    }
-}ComDefaultInterfaceAttribute
+}
