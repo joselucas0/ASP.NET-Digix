@@ -1,102 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Educacional</title>
-    <link rel="stylesheet" href="./css/site.css">
+    <title>Sistema Educacional Colman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles-global.css">
     <style>
-        /* é parte que fica em cima da pagina com a imagem de fundo e o texto  */
+        :root {
+            --primary-color: #0d6efd;
+            --dark-color: #212529;
+        }
+
         .hero-section {
-            background-color: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('https://source.unsplash.com/random/1200x600/?school,university');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            margin-bottom: 50px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), 
+                        url('https://source.unsplash.com/random/1920x1080/?school') center/cover);
+            padding: 120px 0;
             color: white;
-            text-align: center;
+            position: relative;
         }
 
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
         }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .system-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
     </style>
-
 </head>
-
 <body>
-    <!-- fas é estilo solido; fa-graduation é icone estilo capelo; me-2 é magem direita -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <!-- tag a é para ligar hiper ligacações -->
-            <a class="navbar-brand" href="#">
-                <!-- tag i ara deixar o string em italico -->
-                <i class="fas fa-graduation-cap me-2">Escola Colman LTDA</i>
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>Colman Academy
             </a>
-            <button class="navbar-toggler" type="button" data-bs-taggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                            <i class="fas fa-home me-1">Home</i>
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.html" class="nav-link">
-                            <i class="fas fa-sign-in-alt me-2">login</i>
-                        </a>
+                        <button class="nav-link btn btn-link" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt me-2"></i>Sair
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- colocar header para já entrar no titulo e listar as funcionalidas -->
-     <header class="hero-section">
-        <div class="container">
-            <!-- display-4 uma classe do bootstrap para deixar o texto maior e mais detectado -->
-             <!-- fwobold é outra classe bt. que deixa o texto mais grosso -->
-            <h1 class="display-4 fw-bold">Bem vindo ao Cursos Colman</h1>
-            <p class="lead"> Sistemas de gestão Educacional</p>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Gestão Educacional Inteligente</h1>
+            <p class="lead fs-5">Solução completa para instituições de ensino</p>
+            <div class="mt-4">
+                <a href="#modulos" class="btn btn-light btn-lg mx-2">
+                    <i class="fas fa-th-large me-2"></i>Módulos
+                </a>
+                <button class="btn btn-outline-light btn-lg mx-2" id="saiba-mais">
+                    <i class="fas fa-info-circle me-2"></i>Saiba Mais
+                </button>
+            </div>
         </div>
     </header>
 
-    <section class="container py-5">
-        <h2 class="text-center mb-5">Nossos Módulos</h2>
+    <!-- Módulos -->
+    <section id="modulos" class="container py-5">
+        <h2 class="text-center mb-5 display-5 fw-bold">Nossos Módulos</h2>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100">
-              <img src="https://th.bing.com/th/id/OIP.AUQk6KkAAgvZ45F7b-2hrAHaEj?w=263&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" class="card-img-top" alt="Alunos">
-              <div class="card-body text-center">
-                <h5 class="card-title">Gestão de Alunos</h5>
-                <p class="card-text">Cadastre e gerencie os alunos da instituição</p>
-                <a href="login.html" class="btn btn-primary">Acessar</a>
-              </div>
+            <!-- Alunos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 feature-card">
+                    <img src="https://source.unsplash.com/random/800x600/?student" 
+                         class="card-img-top" 
+                         alt="Gestão de Alunos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">
+                            <i class="fas fa-users me-2"></i>Alunos
+                        </h5>
+                        <p class="card-text text-muted mt-3">
+                            Cadastro completo com histórico acadêmico e acompanhamento individual.
+                        </p>
+                        <a href="alunos.html" class="btn btn-primary mt-3">
+                            Acessar Módulo
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100">
-              <img src="https://th.bing.com/th/id/OIP.Ag1PBOm-9oLRRtWLQY9DogHaD4?w=273&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" class="card-img-top" alt="Cursos">
-              <div class="card-body text-center">
-                <h5 class="card-title">Gestão de Cursos</h5>
-                <p class="card-text">Administre os cursos oferecidos</p>
-                <a href="cursos.html" class="btn btn-primary">Acessar</a>
-              </div>
-            </div>
-          </div>
-          
-    </section>
-</body>
 
+            <!-- Cursos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 feature-card">
+                    <img src="https://source.unsplash.com/random/800x600/?education" 
+                         class="card-img-top" 
+                         alt="Gestão de Cursos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">
+                            <i class="fas fa-book-open me-2"></i>Cursos
+                        </h5>
+                        <p class="card-text text-muted mt-3">
+                            Controle completo de grades curriculares e calendários acadêmicos.
+                        </p>
+                        <a href="cursos.html" class="btn btn-primary mt-3">
+                            Acessar Módulo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disciplinas -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 feature-card">
+                    <img src="https://source.unsplash.com/random/800x600/?classroom" 
+                         class="card-img-top" 
+                         alt="Gestão de Disciplinas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">
+                            <i class="fas fa-chalkboard-teacher me-2"></i>Disciplinas
+                        </h5>
+                        <p class="card-text text-muted mt-3">
+                            Organização de conteúdos programáticos e planos de aula.
+                        </p>
+                        <a href="disciplinas.html" class="btn btn-primary mt-3">
+                            Acessar Módulo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="display-6 fw-bold mb-4">Por que escolher nosso sistema?</h2>
+                    <ul class="list-unstyled system-features">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Interface intuitiva e moderna</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Relatórios em tempo real</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Suporte 24/7</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Integração total entre módulos</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://source.unsplash.com/random/800x600/?dashboard" 
+                         alt="Dashboard" 
+                         class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>Colman Academy</h5>
+                    <p class="mt-3 text-muted">Transformando a educação através da tecnologia</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i>contato@colman.com</li>
+                        <li><i class="fas fa-phone me-2"></i>(11) 9876-5432</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="alunos.html" class="text-white">Alunos</a></li>
+                        <li><a href="cursos.html" class="text-white">Cursos</a></li>
+                        <li><a href="login.html" class="text-white">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="mb-0">&copy; <span id="current-year"></span> Colman Academy. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/modal.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ano dinâmico
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Modal Saiba Mais
+        document.getElementById('saiba-mais').addEventListener('click', () => {
+            const modal = new CustomModal();
+            modal.show('Sobre o Sistema', `
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Recursos Principais</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>Gestão completa de alunos</li>
+                            <li><i class="fas fa-check me-2"></i>Controle de cursos e disciplinas</li>
+                            <li><i class="fas fa-check me-2"></i>Relatórios personalizados</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Vantagens</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-lock me-2"></i>Segurança de dados</li>
+                            <li><i class="fas fa-mobile-alt me-2"></i>Design responsivo</li>
+                            <li><i class="fas fa-headset me-2"></i>Suporte especializado</li>
+                        </ul>
+                    </div>
+                </div>
+            `, [
+                { text: 'Fechar', type: 'secondary' }
+            ]);
+        });
+    </script>
+</body>
 </html>
